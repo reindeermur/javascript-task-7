@@ -12,7 +12,7 @@ exports.runParallel = runParallel;
 function runParallel(jobs, parallelNum, timeout = 1000) {
     // асинхронная магия
     return new Promise(resolveProg => {
-        const result = [];
+        let result = [];
         let startedCount = 0;
 
         function translate(jobIndex) {
